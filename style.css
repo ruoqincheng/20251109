@@ -1,0 +1,107 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+}
+
+#side-menu {
+  position: fixed;
+  left: -200px; /* 初始狀態為隱藏 */
+  top: 0;
+  width: 200px;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+  padding-top: 50px;
+}
+
+#side-menu.show {
+  left: 0;
+}
+
+.menu-item {
+  padding: 15px 20px;
+  margin: 10px 0;
+}
+
+.menu-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 32px;
+  display: block;
+  font-family: Arial, sans-serif;
+}
+
+.menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-item.signature {
+  text-align: center;
+  padding: 20px 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 20px;
+}
+
+.menu-item.signature .school {
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: #f7d002;
+}
+
+.menu-item.signature .name {
+  font-size: 28px;
+  font-weight: bold;
+  color: #f71735;
+}
+
+.iframe-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 85%;
+  background-color: white;
+  z-index: 2000;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.iframe-container.show {
+  display: block;
+}
+
+.iframe-header {
+  height: 40px;
+  background-color: #333;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.iframe-header button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.iframe-header button:hover {
+  color: #ff4444;
+}
+
+#content-iframe {
+  width: 100%;
+  height: calc(100% - 40px);
+  border: none;
+}

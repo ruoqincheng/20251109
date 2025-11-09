@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sketch</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+  </head>
+
+  <body style="margin: 0; background-color: black;">
+    <div id="side-menu">
+      <div class="menu-item"><a href="#" onclick="showIframe('https://ruoqincheng.github.io/20251020/'); return false;">第一單元作品</a></div>
+      <div class="menu-item"><a href="#" onclick="showIframe('https://hackmd.io/@ppQ0FPhEQoqveC99pJ3gIQ/HJrxwmRjge/'); return false;">第一單元講義</a></div>
+  <div class="menu-item"><a href="#" onclick="showQuestionMenu(); return false;">測驗系統</a></div>
+      <div class="menu-item"><a href="#" onclick="showHomePage(); return false;">回到首頁</a></div>
+    </div>
+    <div id="sketch-holder" style="display: flex; justify-content: center; align-items: center; height: 100vh;"></div>
+    <div id="iframe-container" class="iframe-container">
+      <div class="iframe-header">
+        <button onclick="closeIframe()">×</button>
+      </div>
+      <iframe id="content-iframe" frameborder="0"></iframe>
+    </div>
+    <script src="sketch.js"></script>
+  </body>
+</html>
